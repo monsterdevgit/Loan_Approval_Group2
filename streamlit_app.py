@@ -46,7 +46,7 @@ Credit_History = True if credit_history == "Yes" else False
 Dependents_0 = True if dependents == "0" else False
 Dependents_1 = True if dependents == "1" else False
 Dependents_2 = True if dependents == "2" else False
-Dependents_3+ = True if dependents == "3+" else False
+Dependents_3_plus = True if dependents == "3+" else False
 
 # Encoding area (True/False for Rural, Semiurban, and Urban)
 Area_Rural = True if area == "Rural" else False
