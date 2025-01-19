@@ -35,42 +35,42 @@ term = st.sidebar.number_input("Loan Term (months)", min_value=12, max_value=360
 credit_history = st.sidebar.selectbox("Credit History", ["Yes", "No"])
 area = st.sidebar.selectbox("Property Area", ["Urban", "Rural", "Semiurban"])
 
-# Encoding categorical variables (using True/False as per original dataset format)
-gender_encoded = True if gender == "Male" else False
-married_encoded = True if married == "Yes" else False
-education_encoded = True if education == "Graduate" else False
-self_employed_encoded = True if self_employed == "Yes" else False
-credit_history_encoded = True if credit_history == "Yes" else False
+# Encoding categorical variables to match column names from original dataset
+Gender = True if gender == "Male" else False
+Married = True if married == "Yes" else False
+Education = True if education == "Graduate" else False
+Self_Employed = True if self_employed == "Yes" else False
+Credit_History = True if credit_history == "Yes" else False
 
 # Encoding dependents (True/False for each category)
-dependents_0 = True if dependents == "0" else False
-dependents_1 = True if dependents == "1" else False
-dependents_2 = True if dependents == "2" else False
-dependents_3_plus = True if dependents == "3+" else False
+Dependents_0 = True if dependents == "0" else False
+Dependents_1 = True if dependents == "1" else False
+Dependents_2 = True if dependents == "2" else False
+Dependents_3_plus = True if dependents == "3+" else False
 
 # Encoding area (True/False for Rural, Semiurban, and Urban)
-area_rural = True if area == "Rural" else False
-area_semiurban = True if area == "Semiurban" else False
-area_urban = True if area == "Urban" else False
+Area_Rural = True if area == "Rural" else False
+Area_Semiurban = True if area == "Semiurban" else False
+Area_Urban = True if area == "Urban" else False
 
-# Combine all inputs into a single list
+# Combine all inputs into a single list with matching column names from the training dataset
 input_data = [
     applicant_income,
     coapplicant_income,
     loan_amount,
     term,
-    credit_history_encoded,
-    gender_encoded,
-    married_encoded,
-    dependents_0,
-    dependents_1,
-    dependents_2,
-    dependents_3_plus,
-    education_encoded,
-    self_employed_encoded,
-    area_rural,
-    area_semiurban,
-    area_urban,
+    Credit_History,
+    Gender,
+    Married,
+    Dependents_0,
+    Dependents_1,
+    Dependents_2,
+    Dependents_3_plus,
+    Education,
+    Self_Employed,
+    Area_Rural,
+    Area_Semiurban,
+    Area_Urban,
 ]
 
 # Load model
