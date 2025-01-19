@@ -46,7 +46,7 @@ Credit_History = True if credit_history == "Yes" else False
 Dependents_0 = True if dependents == "0" else False
 Dependents_1 = True if dependents == "1" else False
 Dependents_2 = True if dependents == "2" else False
-Dependents_3_plus = True if dependents == "3+" else False
+Dependents_3+ = True if dependents == "3+" else False
 
 # Encoding area (True/False for Rural, Semiurban, and Urban)
 Area_Rural = True if area == "Rural" else False
@@ -55,17 +55,17 @@ Area_Urban = True if area == "Urban" else False
 
 # Combine all inputs into a single list with matching column names from the training dataset
 input_data = [
-    applicant_income,
-    coapplicant_income,
-    loan_amount,
-    term,
+    Applicant_Income,
+    Coapplicant_Income,
+    Loan_Amount,
+    Term,
     Credit_History,
     Gender,
     Married,
     Dependents_0,
     Dependents_1,
     Dependents_2,
-    Dependents_3_plus,
+    Dependents_3+,
     Education,
     Self_Employed,
     Area_Rural,
