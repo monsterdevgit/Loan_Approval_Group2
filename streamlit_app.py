@@ -18,7 +18,7 @@ def predict_eligibility(model, input_data):
     return prediction, probability
 
 # Streamlit app
-st.title("Loan Eligibility Prediction App")
+st.title("AgriFlow: Loan Eligibility Prediction App")
 st.write("This application predicts loan eligibility based on user inputs.")
 
 # Sidebar for user inputs
