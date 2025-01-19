@@ -5,7 +5,7 @@ import pickle
 # Load pre-trained model and scaler
 @st.cache_resource
 def load_model():
-    with open("loan_eligibility_model.pkl", "rb") as model_file:
+    with open("loan_approval_model.pkl", "rb") as model_file:
         model = pickle.load(model_file)  
     return model
 
