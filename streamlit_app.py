@@ -30,28 +30,28 @@ education = st.sidebar.selectbox("Education", ["Graduate", "Not Graduate"])
 self_employed = st.sidebar.selectbox("Self Employed", ["Yes", "No"])
 applicant_income = st.sidebar.number_input("Applicant Income (₦)", min_value=0, max_value=10000000, value=5000)
 coapplicant_income = st.sidebar.number_input("Coapplicant Income (₦)", min_value=0, max_value=5000000, value=2000)
-loan_amount = st.sidebar.number_input("Loan Amount", min_value=0, max_value=10000000, value=100000)
+loan_amount = st.sidebar.number_input("Loan Amount (₦)", min_value=0, max_value=10000000, value=100000)
 term = st.sidebar.number_input("Loan Term (months)", min_value=12, max_value=360, value=120)
 credit_history = st.sidebar.selectbox("Credit History", ["Yes", "No"])
 area = st.sidebar.selectbox("Property Area", ["Urban", "Rural", "Semiurban"])
 
-# Encoding categorical variables (adjust encoding based on your trained model)
-gender_encoded = 1 if gender == "Male" else 0
-married_encoded = 1 if married == "Yes" else 0
-education_encoded = 1 if education == "Graduate" else 0
-self_employed_encoded = 1 if self_employed == "Yes" else 0
-credit_history_encoded = 1 if credit_history == "Yes" else 0
+# Encoding categorical variables (using True/False as per original dataset format)
+gender_encoded = True if gender == "Male" else False
+married_encoded = True if married == "Yes" else False
+education_encoded = True if education == "Graduate" else False
+self_employed_encoded = True if self_employed == "Yes" else False
+credit_history_encoded = True if credit_history == "Yes" else False
 
-# Encoding dependents
-dependents_0 = 1 if dependents == "0" else 0
-dependents_1 = 1 if dependents == "1" else 0
-dependents_2 = 1 if dependents == "2" else 0
-dependents_3_plus = 1 if dependents == "3+" else 0
+# Encoding dependents (True/False for each category)
+dependents_0 = True if dependents == "0" else False
+dependents_1 = True if dependents == "1" else False
+dependents_2 = True if dependents == "2" else False
+dependents_3_plus = True if dependents == "3+" else False
 
-# Encoding area
-area_rural = 1 if area == "Rural" else 0
-area_semiurban = 1 if area == "Semiurban" else 0
-area_urban = 1 if area == "Urban" else 0
+# Encoding area (True/False for Rural, Semiurban, and Urban)
+area_rural = True if area == "Rural" else False
+area_semiurban = True if area == "Semiurban" else False
+area_urban = True if area == "Urban" else False
 
 # Combine all inputs into a single list
 input_data = [
