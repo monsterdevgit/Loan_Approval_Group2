@@ -65,7 +65,7 @@ input_data = [
     Dependents_0,
     Dependents_1,
     Dependents_2,
-    Dependents_3+,
+    Dependents_3_plus,
     Education,
     Self_Employed,
     Area_Rural,
