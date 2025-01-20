@@ -21,13 +21,13 @@ def predict_eligibility(model, input_data):
 st.set_page_config(page_title="AgriFlow Loan Eligibility", page_icon=":bank:", layout="centered")
 
 # App title
-st.title("AgriFlow: Loan Eligibility Prediction App :money_with_wings:")
+st.title("AgriFlow: Loan Eligibility Prediction App  🤖")
 
 # Description
 st.markdown("""
     **Welcome to AgriFlow's Loan Eligibility Prediction App!**  
     This app helps you determine whether applicant's are eligible for a loan based on their personal information.
-    Fill in the details below and click on "Predict Loan Eligibility" to find out!
+    Fill in the details and click on "Predict Loan Eligibility" to find out!
     """)
 
 # Sidebar for user inputs with better grouping
